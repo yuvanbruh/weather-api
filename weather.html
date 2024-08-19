@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="weather.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+</head>
+<body>
+    <div class="weather-dashboard">
+        <div class="dabba">
+        <div class="left-panel">
+            <div class="location" >
+                <input type="text" id="city" class="inputtype" ><i class="fa-solid fa-magnifying-glass" id="glass" class="glass"></i>
+              
+                <p>Temperature: <span id="temperature">N/A</span>*F</p>
+                <!-- <p>9.8%</p> -->
+                <p>Wind: <span id="wind">N/A</span> WSW mph</p>
+            </div>
+            <div class="risk-level">
+                <p>Safe</p>
+                <div class="risk-bar">
+                    <div class="risk-indicator" style="width: 0.8%;"></div>
+                </div>
+                <p id="dangerous">Dangerous</p>
+            </div>
+            <div class="temperature-chart">
+                <canvas id="tempChart"></canvas>
+            </div>
+            <div class="city-info">
+                <p id="citeh">Oklahoma City</p>
+                <p>The air quality is generally acceptable for most individuals. However, sensitive groups may experience minor to moderate symptoms from long-term exposure.</p>
+            </div>
+        </div>
+        
+        <div class="main-panel">
+            <h1>Weather Forecast</h1>
+            <h2>Condition <span id="condition">N/A</span></h2>
+            <div class="forecast-details">
+                <p> 8:45AM <span id="visibility">N/A</span>miles</p>
+                <!-- <p id="clouds">Variable clouds with snow showers. High 11°F. Winds E at 10 to 20 mph. Chance of snow 50%. Snow accumulations less than one inch.</p> -->
+                <!-- <button></button> -->
+            </div>
+            <div class="temperature-range">
+                <p>Humidity: <span id="humidity">N/A</span>%</p>
+            </div>
+            <div class="sun">
+                <p>Sunrise: <span id="sunrise">N/A</span></p>
+                <p>Sunset: <span id="sunset">N/A</span></p>
+            </div>
+            <h2>Forecast</h2>
+            <div id="forecast"></div>
+            <div class="forecast-graph">
+                <p>Temperature over next 5 days</p>
+                <canvas id="forecastChart"></canvas>
+            </div>
+        </div>
+    </div>
+        <div class="bottom-panel">
+            <!-- <div class="city-weather">
+                <p class="monday" id="0">Washington D.C</p>
+                <p id="mon_temp">20°C</p>
+            </div>
+            <div class="city-weather">
+                <p class="monday"  id="1">Philadelphia</p>
+                <p id="tue_temp">17°C</p>
+            </div>
+            <div class="city-weather">
+                <p class="monday" id="2">San Francisco</p>
+                <p id="wed_temp">12°C</p>
+            </div>
+            <div class="city-weather">
+                <p class="monday"  id="3">New York City</p>
+                <p id="thur_temp">10°C</p>
+            </div>
+            <div class="city-weather">
+                <p class="monday"  id="4">South Dakota</p>
+                <p id="fri_temp">-8°C</p>
+            </div>
+            <div class="city-weather">
+                <p class="monday"  id="5">North Dakota</p>
+                <p id="sat_temp">-9°C</p>
+            </div> -->
+        
+                <!-- <div class="city-weather">
+                    <p class="monday" id="0">Washington D.C</p>
+                    <p id="mon_temp">20°C</p>
+                </div>
+                <div class="city-weather">
+                    <p class="monday" id="1">Philadelphia</p>
+                    <p id="mon_temp">17°C</p>
+                </div>
+                <div class="city-weather">
+                    <p class="monday" id="2">San Francisco</p>
+                    <p id="mon_temp">12°C</p>
+                </div>
+                <div class="city-weather">
+                    <p class="monday" id="3">New York City</p>
+                    <p id="mon_temp">10°C</p>
+                </div>
+                <div class="city-weather">
+                    <p class="monday" id="4">South Dakota</p>
+                    <p id="mon_temp">-8°C</p>
+                </div>
+                <div class="city-weather">
+                    <p class="monday" id="5">North Dakota</p>
+                    <p id="mon_temp">-9°C</p>
+                </div>
+         -->
+         <div class="city-weather">
+            <p class="monday" id="0">Hyderabad</p>
+            <p class="mon_temp" id="Hyderabad">20°C</p>
+        </div>
+        <div class="city-weather">
+            <p class="monday" id="1">Denver</p>
+            <p class="mon_temp" id="denver">17°C</p>
+        </div>
+        <div class="city-weather">
+            <p class="monday" id="2">Texas</p>
+            <p class="mon_temp" id="texas">12°C</p>
+        </div>
+        <div class="city-weather">
+            <p class="monday" id="3">banglore</p>
+            <p class="mon_temp" id="banglore">10°C</p>
+        </div>
+        <div class="city-weather">
+            <p class="monday" id="4">california</p>
+            <p class="mon_temp" id="california">-8°C</p>
+        </div>
+        <div class="city-weather">
+            <p class="monday" id="5">Nevada</p>
+            <p class="mon_temp" id="Nevada">-9°C</p>
+        </div>
+
+            
+        </div>
+    </div>
+
+    </div>
+    <script src="wear.js"></script>
+</body>
+</html>
